@@ -7,8 +7,17 @@ import spark.Request;
 
 public class calculator {
 
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
+        port(getPort());
+        get("/tan", "application/json", (req, res) -> {
+            res.type("application/json");
+            return jsonUpdate("Tangente", tan(req.queryParams("value")), req);
+        });
+
+        get("/acos", "application/json", (req, res) -> {
+            res.type("application/json");
+            return jsonUpdate("acos", acos(req.queryParams("value")), req);
+        });
 
     }
 
@@ -22,6 +31,14 @@ public class calculator {
         Double ans2 = 0.0;
         ans2 = Math.acos(Double.parseDouble(value));
         return ans2;
+    }
+
+    public static JSONObject jsonUpdate(String operation, Double value, Request req) {
+        JSONObject json = new JSONObject();
+        json.put("operation", operation);
+        json.put("input", req.queryParams("value"));
+        json.put("output", value);
+        return json;
     }
 
     private static int getPort() {
