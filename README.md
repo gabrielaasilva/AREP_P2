@@ -40,11 +40,12 @@ java -cp "target/classes:target/dependency/*" edu.escuelaing.calculator
 ## Evidencias
 
 Formato de Salida
+
 ![Formato de salida](https://github.com/gabrielaasilva/AREP_P2/blob/main/img/json.PNG)
 
 
-
 Aplicacion JAVA corriendo en EC2
+
 ![ec2Running](https://github.com/gabrielaasilva/AREP_P2/blob/main/img/ec2running.PNG)
 
 
