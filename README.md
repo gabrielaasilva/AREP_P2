@@ -55,4 +55,4 @@ Aplicacion JAVA corriendo en EC2
 
 ## Actor
 
-* **Ana Gabriela Silva** - [gabrielaasilva](https://github.com/gabrielaasilva)
+ [Ana Gabriela Silva.](https://github.com/gabrielaasilva)
