@@ -35,9 +35,10 @@ public class calculator {
 
     public static JSONObject jsonUpdate(String operation, Double value, Request req) {
         JSONObject json = new JSONObject();
-        json.put("operation", operation);
-        json.put("input", req.queryParams("value"));
         json.put("output", value);
+        json.put("input", req.queryParams("value"));
+        json.put("operation", operation);
+        
         return json;
     }
 
